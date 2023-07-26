@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Nexus deployment') {
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'okap', classifier: '', file: 'target/okap-1.0.jar', type: 'jar']], credentialsId: 'nexus', groupId: 'com.groupeisi.m2gl', nexusUrl: 'http://localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'okap', version: '1.0' // Dépôt de l'artefact dans Nexus
+                nexusArtifactUploader artifacts: [[artifactId: 'mouhamadou_mane', classifier: '', file: 'target/mouhamadou_mane-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexus', groupId: 'com.groupeisi.m2gl', nexusUrl: 'http://localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'okap', version: '0.0.1-SNAPSHOT'
             }
         }
     }
