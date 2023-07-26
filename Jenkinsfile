@@ -12,23 +12,23 @@ pipeline {
         }
         stage('Compile') {
             steps {
-                sh 'mvn compile'
+                bat 'mvn compile'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         stage('Package') {
             steps {
-                sh 'mvn package'
+                bat 'mvn package'
             }
         }
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') { 
-                    sh 'mvn sonar:sonar'
+                    bat 'mvn sonar:sonar'
                 }
             }
         }
